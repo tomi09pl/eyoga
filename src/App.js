@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './scss/App.scss';
+import Header from "./components/header";
 
 
 const Test1 = () => (
@@ -15,6 +16,7 @@ const Test1 = () => (
 function App() {
   return (
     <div className="App">
+        <Header/>
       <header className="App-header">
           <Test1 />
         <img src={logo} className="App-logo" alt="logo" />
