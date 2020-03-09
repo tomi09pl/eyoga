@@ -1,0 +1,62 @@
+@import "variables";
+
+.page-footer{
+  background-color: $footer-background;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+
+.footer-nav-list {
+  //display: flex;
+  //justify-content: space-between;
+  list-style: none;
+  text-align: left;
+  li {
+    padding: 3px 0;
+  }
+}
+
+.footer-talk-to-us {
+  margin: 22px;
+  text-align: right;
+  .footer-txt {
+    font-size: 18px;
+    font-style: italic;
+    span {
+      color: lighten(#0097e6, 25%);
+    }
+  }
+  .footer-btn {
+    background-color: $footer-background;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 800;
+    margin: 10px 0;
+    padding: 18px 54px;
+    transition: background-color .1s ease-in-out;
+  }
+  .footer-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid $footer-background;
+  }
+}
+
+.fa {
+  padding: 0 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  //border-radius: 25%;
+  //border: 1px solid #ffffff;
+}
+.fa:hover {
+  opacity: 0.7;
+}

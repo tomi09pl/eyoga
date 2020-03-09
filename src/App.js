@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './scss/App.scss';
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 
 const Test1 = () => (
@@ -32,6 +33,7 @@ function App() {
           Learn React
         </a>
       </header>
+        <Footer/>
     </div>
   );
 }
