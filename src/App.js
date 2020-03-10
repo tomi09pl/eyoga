@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './scss/App.scss';
 import Header from "./components/header";
 import Footer from "./components/footer";
-
+import Slideshow from "./components/Main_Section1_Slideshow";
 
 const Test1 = () => (
       <div>
@@ -18,6 +18,7 @@ function App() {
   return (
     <div className="App">
         <Header/>
+        <Slideshow/>
       <header className="App-header">
           <Test1 />
         <img src={logo} className="App-logo" alt="logo" />
