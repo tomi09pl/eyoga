@@ -16,8 +16,9 @@ h3 {
 
 .each-slide span {
   padding: 20px;
-  font-size: 20px;
-  background: #efefef;
+  font-size: 40px;
+  color: #ffffff;
+  background: rgba(0,0,0,0.2);
   text-align: center;
 }
 
@@ -41,4 +42,11 @@ h3 {
   align-items: center;
   margin: 0;
   background: #adceed;
+}
+
+.react-slideshow-container + div.indicators{
+  position: relative;
+  top: -13px;
+  height: 0;
+  margin-top: 0 !important;
 }

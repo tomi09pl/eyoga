@@ -1,11 +1,20 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
+import obrazek1 from '../img/ashley-batz-betm.jpg';
+import obrazek2 from '../img/eneko-urunuela-unsplash.jpg';
+import obrazek3 from '../img/simon-migaj.jpg';
+import obrazek4 from '../img/v2osk.jpg';
+
 
 const slideImages = [
-    '../img/ashley-batz-betm.jpg',
-    '../img/eneko-urunuela-unsplash.jpg',
-    '../img/simon-migaj.jpg',
-    '../img/v2osk.jpg'
+    obrazek1,
+    obrazek2,
+    obrazek3,
+    obrazek4
+    // '../img/ashley-batz-betm.jpg',
+    // '../img/eneko-urunuela-unsplash.jpg',
+    // '../img/simon-migaj.jpg',
+    // '../img/v2osk.jpg'
 ];
 
 const properties = {
@@ -21,22 +30,22 @@ const Slideshow = () => {
         <Slide {...properties}>
             <div className="each-slide">
                 <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
-                    <span>Slide 1</span>
+                    <span>Lorem ipsum dolor sit amet.</span>
                 </div>
             </div>
             <div className="each-slide">
                 <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
-                    <span>Slide 2</span>
+                    <span>Consectetur adipiscing elit.</span>
                 </div>
             </div>
             <div className="each-slide">
                 <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
-                    <span>Slide 3</span>
+                    <span>Ut enim ad minim veniam.</span>
                 </div>
             </div>
             <div className="each-slide">
                 <div style={{'backgroundImage': `url(${slideImages[3]})`}}>
-                    <span>Slide 4</span>
+                    <span>Duis aute irure dolor.</span>
                 </div>
             </div>
         </Slide>
