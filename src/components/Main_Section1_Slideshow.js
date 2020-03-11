@@ -1,16 +1,16 @@
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
-import obrazek1 from '../img/ashley-batz-betm.jpg';
-import obrazek2 from '../img/eneko-urunuela-unsplash.jpg';
-import obrazek3 from '../img/simon-migaj.jpg';
-import obrazek4 from '../img/v2osk.jpg';
+import img1 from '../img/ashley-batz-betm.jpg';
+import img2 from '../img/eneko-urunuela-unsplash.jpg';
+import img3 from '../img/simon-migaj.jpg';
+import img4 from '../img/v2osk.jpg';
 
 
 const slideImages = [
-    obrazek1,
-    obrazek2,
-    obrazek3,
-    obrazek4
+    img1,
+    img2,
+    img3,
+    img4
     // '../img/ashley-batz-betm.jpg',
     // '../img/eneko-urunuela-unsplash.jpg',
     // '../img/simon-migaj.jpg',

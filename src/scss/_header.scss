@@ -6,7 +6,8 @@
   display:flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  z-index: 999;
+  transition: all 350ms ease-out;
 }
 
 .page-header-logo{
@@ -23,6 +24,7 @@
 .main-nav-list{
   list-style: none;
   display: flex;
+  margin-right: 10px;
 }
 
 a{
@@ -31,6 +33,9 @@ a{
   color: #fff;
   font-family: sans-serif;
   font-size: 18px;
+}
+a:hover{
+  color: $color-App-link;
 }
 
 .main-nav-toggle{
@@ -50,6 +55,8 @@ a{
 
 .main-nav-toggle-show{
   @extend .main-nav-toggle;
+  position: relative;
+  left: calc(50% - 25px);
 }
 
 @media (max-width: 780px) {
@@ -66,7 +73,7 @@ a{
     left:-370px;
     width: 320px;
     height: 100%;
-    background: darken($header-background, 10);
+    //background: darken($header-background, 10);
     flex-direction: column;
     li{
       margin-top: 10px;
@@ -74,10 +81,18 @@ a{
   }
   .main-nav-toggle{
     display: block;
+    margin-right: 10px;
   }
 
   .main-nav-list.show {
     transform: translate(100%);
+    background-color: #353b48;
   }
 
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }

@@ -1,13 +1,14 @@
 import React from 'react';
 
 const Header = () =>(
-    <header className="page-header">
+
+    <header className="page-header sticky">
         <span className="page-header-logo">
             <span className="page-header-logo left">Eye's </span>
             <span className="page-header-logo right">Yoga</span>
         </span>
 
-        <div className="main-nav">
+        <nav className="main-nav">
             <ul className="main-nav-list">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Exercises</a></li>
@@ -27,7 +28,7 @@ const Header = () =>(
                 <span></span>
                 <span></span>
             </button>
-        </div>
+        </nav>
     </header>
 );
 
