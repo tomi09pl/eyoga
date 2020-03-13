@@ -9,6 +9,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 //======================================================================//
 //=============== Header onScroll color change =========================//
 //======================================================================//
+//przenisc to do osobnego pliku i zaimportowac tutaj!
 const bodyTag = document.querySelector('body');
 const header = document.querySelector('.page-header');
 // const nav = document.querySelector('.main-nav-list');
@@ -29,4 +30,4 @@ window.addEventListener('scroll', () => {
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.register();
