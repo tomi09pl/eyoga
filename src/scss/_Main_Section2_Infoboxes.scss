@@ -25,6 +25,15 @@
   width: 30vw;
   height: 35%;
   background: #282c34;
+  display: flex;
+  box-sizing: border-box;
+}
+.fa-book-reader{
+  padding: 20px 20px;
+}
+
+.infobox-txt {
+  padding: 20px 0;
 }
 
 .first-row {
@@ -44,4 +53,16 @@
   //position: absolute;
   //top: 10%;
   //left: 50%;
+}
+
+.fas {
+  padding: 20px 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+i {
+  color: white;
 }

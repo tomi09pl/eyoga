@@ -27,8 +27,12 @@ const Section2 = () => {
             <div className="row first-row">
             <Parallax className="parallax-container" x={[x, x2]} y={[y, y2]} styleInner={styleInner}>
                 <div className="infobox">
-                    <div><i>MY ICON</i></div>
-                    <div>My teXT</div>
+                    <i className="fas fa-book-reader"></i>
+                    <div className="infobox-txt">
+                        <h3>Science Background</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#">Show me more - link</a>
+                    </div>
                 </div>
             </Parallax>
 
