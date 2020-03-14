@@ -13,9 +13,9 @@ const Footer = () => (
             <div className="footer-txt">Health at the reach of your <span>eyesight.</span></div>
             <button className="footer-btn">TALK TO US</button>
             <div>
-                <a href="https://www.facebook.com/" target="_blank" className="fa fa-facebook"></a>
-                <a href="https://twitter.com/" target="_blank" className="fa fa-twitter"></a>
-                <a href="https://www.instagram.com/" target="_blank" className="fa fa-instagram"></a>
+                <a href="https://www.facebook.com/" target="_blank" className="fab fa-facebook-f"></a>
+                <a href="https://twitter.com/" target="_blank" className="fab fa-twitter"></a>
+                <a href="https://www.instagram.com/" target="_blank" className="fab fa-instagram"></a>
             </div>
         </div>
     </footer>

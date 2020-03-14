@@ -20,7 +20,8 @@ let scrolled = () => {
 };
 
 window.addEventListener('scroll', () => {
-    header.style.setProperty('background-color', scrolled() > 0 ? "#353b48" : "#353b481A");
+    // header.style.setProperty('background-color', scrolled() > 0 ? "#353b48" : "#353b481A");
+    header.style.setProperty('background-color', scrolled() > 0 ? "#ECE7E7" : "#353b481A");
     // nav.style.setProperty('background-color', scrolled() > 0 ? "#353b48" : "");
 });
 //======================================================================//
