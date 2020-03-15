@@ -2,10 +2,7 @@
 
 .section2-main {
   height: 100%;
-  background: $light-color;
-  //display: flex;
-  //justify-content: space-around;
-  //align-items: center;
+  background: $dark-color;
 }
 
 .row {
@@ -23,17 +20,28 @@
 
 .infobox {
   width: 30vw;
-  height: 35%;
-  background: #282c34;
+  height: 35vh;
+  background: $light-color;
   display: flex;
   box-sizing: border-box;
-}
-.fa-book-reader{
-  padding: 20px 20px;
+  border-radius: 6px;
 }
 
 .infobox-txt {
-  padding: 20px 0;
+  //padding: 20px 0;
+  text-align: left;
+  h3 {
+    text-align: left;
+    color: $bright-red;
+  }
+  a {
+    padding: 20px 0;
+  }
+
+  p {
+    text-align: justify;
+    margin-right: 62.5px;
+  }
 }
 
 .first-row {
@@ -48,21 +56,22 @@
   left: -3.1vw;
 }
 
-.txt {
-  font-size: 24px;
-  //position: absolute;
-  //top: 10%;
-  //left: 50%;
-}
-
 .fas {
   padding: 20px 20px;
   font-size: 30px;
   width: 30px;
   text-align: center;
   text-decoration: none;
+  color: $bright-red;
 }
 
 i {
   color: white;
+}
+
+.fa-info {
+  padding: 0;
+  width: 10px;
+  font-size: 20px;
+  opacity: 50%;
 }

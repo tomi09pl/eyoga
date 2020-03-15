@@ -1,5 +1,10 @@
 @import "variables";
 
+.section3-parallax {
+  color: $bright-red;
+  text-shadow: 2px 2px 4px $dark-color;
+}
+
 .section3-h1{
   position: relative;
   text-align: left;
@@ -11,4 +16,35 @@
   text-align: left;
   margin-left: 20px;
 
+}
+
+.section3-p {
+  position: relative;
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 600px;
+  color: $dark-color;
+  text-shadow: none;
+  background: #ffffff0D;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.section3-a {
+  //background: $bright-red;
+  border: 1px solid $bright-red;
+  border-radius: 25px;
+  color: $bright-red;
+  font-size: 16px;
+  margin-left: 20px;
+  padding: 10px 10px;
+  position: relative;
+  //padding: 0;
+  //text-shadow: none;
+  transition: 0.1s ease-in;
+}
+
+.section3-a:hover {
+  background: $bright-red;
+  color: $light-color;
 }

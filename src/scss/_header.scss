@@ -14,7 +14,7 @@
   font-family: sans-serif;
   font-size: 22px;
   .left{
-    color: #7f8fa6;
+    color: $main-font-color;
   }
   .right{
     color: #0097e6;
@@ -30,7 +30,7 @@
 a{
   text-decoration: none;
   padding: 20px 10px;
-  color: #fff;
+  color: $main-font-color;
   font-family: sans-serif;
   font-size: 18px;
 }

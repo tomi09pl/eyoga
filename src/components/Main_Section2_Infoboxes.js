@@ -4,8 +4,8 @@ import {Parallax} from 'react-scroll-parallax';
 const Section2 = () => {
 
     const styleInner = {
-        height: '100vh',
-        width: '100%',
+        // height: '100vh',
+        // width: '100%',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center'
@@ -30,20 +30,30 @@ const Section2 = () => {
                     <i className="fas fa-book-reader"></i>
                     <div className="infobox-txt">
                         <h3>Science Background</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#">Show me more - link</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <a href="#"><i className="fas fa-info"></i> Show me more</a>
                     </div>
                 </div>
             </Parallax>
 
             <Parallax className="parallax-container" x={[x, x2]} y={[y, y2]} styleInner={styleInner}>
                 <div className="infobox">
-                    <span className="txt">MOJ TEKST2</span>
+                    <i className="fas fa-couch"></i>
+                    <div className="infobox-txt">
+                        <h3>Relaxation Techniques</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <a href="#"><i className="fas fa-info"></i> Show me more</a>
+                    </div>
                 </div>
             </Parallax>
             <Parallax className="parallax-container" x={[x, x2]} y={[y, y2]} styleInner={styleInner}>
                 <div className="infobox">
-                    <span className="txt">MOJ TEKST3</span>
+                    <i className="fas fa-clipboard-list"></i>
+                    <div className="infobox-txt">
+                        <h3>Exercise Planner</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <a href="#"><i className="fas fa-info"></i> Show me more</a>
+                    </div>
                 </div>
             </Parallax>
             </div>
@@ -51,17 +61,32 @@ const Section2 = () => {
             <div className="row second-row">
             <Parallax className="parallax-container" x={[x3, x4]} y={[y3, y4]} styleInner={styleInner}>
                 <div className="infobox">
-                    <span className="txt">MOJ TEKST4</span>
+                    <i className="fas fa-hourglass-start"></i>
+                    <div className="infobox-txt">
+                        <h3>Basic Exercises</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <a href="#"><i className="fas fa-info"></i> Show me more</a>
+                    </div>
                 </div>
             </Parallax>
             <Parallax className="parallax-container" x={[x3, x4]} y={[y3, y4]} styleInner={styleInner}>
                 <div className="infobox">
-                    <span className="txt">MOJ TEKST5</span>
+                    <i className="fas fa-eye"></i>
+                    <div className="infobox-txt">
+                        <h3>Vision Defect Specific</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <a href="#"><i className="fas fa-info"></i> Show me more</a>
+                    </div>
                 </div>
             </Parallax>
             <Parallax className="parallax-container" x={[x3, x4]} y={[y3, y4]} styleInner={styleInner}>
                 <div className="infobox">
-                    <span className="txt">MOJ TEKST6</span>
+                    <i className="fas fa-shopping-basket"></i>
+                    <div className="infobox-txt">
+                        <h3>Shop</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <a href="#"><i className="fas fa-info"></i> Show me more</a>
+                    </div>
                 </div>
             </Parallax>
             </div>
