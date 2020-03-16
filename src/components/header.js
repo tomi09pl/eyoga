@@ -4,7 +4,7 @@ const Header = () =>(
 
     <header className="page-header sticky">
         <span className="page-header-logo">
-            <span className="page-header-logo left">Eye's </span>
+            <span className="page-header-logo left">Eyes </span>
             <span className="page-header-logo right">Yoga</span>
         </span>
 

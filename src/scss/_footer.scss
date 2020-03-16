@@ -11,8 +11,6 @@
 }
 
 .footer-nav-list {
-  //display: flex;
-  //justify-content: space-between;
   list-style: none;
   text-align: left;
   li {
@@ -20,6 +18,9 @@
   }
   a {
     color: #fff;
+  }
+  a:hover {
+    color: $color-App-link
   }
 }
 

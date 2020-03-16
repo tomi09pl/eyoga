@@ -1,23 +1,25 @@
 @import "variables";
 
-.section3-parallax {
-  color: $bright-red;
-  text-shadow: 2px 2px 4px $dark-color;
+.section4-div {
+  height: 100vh;
+  background: $light-color;
 }
 
-.section3-h1{
+.section4-h1{
+  margin-left: 20px;
+  position: relative;
+  text-align: left;
+}
+
+.section4-h3{
+  padding-top: 18.1px;
   position: relative;
   text-align: left;
   margin-left: 20px;
+  margin-top: 0;
 }
 
-.section3-h3{
-  position: relative;
-  text-align: left;
-  margin-left: 20px;
-}
-
-.section3-p {
+.section4-p {
   position: relative;
   text-align: justify;
   margin-left: 20px;
@@ -29,8 +31,7 @@
   padding: 10px;
 }
 
-.section3-a {
-  //background: $bright-red;
+.section4-a {
   border: 1px solid $bright-red;
   border-radius: 25px;
   color: $bright-red;
@@ -38,28 +39,26 @@
   margin-left: 20px;
   padding: 10px 10px;
   position: relative;
-  //padding: 0;
-  //text-shadow: none;
   transition: 0.1s ease-in;
 }
 
-.section3-a:hover {
+.section4-a:hover {
   background: $bright-red;
   color: $light-color;
 }
 
-//This is class for sliding from left animation
-.slide-in-left {
-  -webkit-animation: slide-in-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
-  animation: slide-in-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+//Animation for sliding in from the right
+
+.slide-in-right {
+  -webkit-animation: slide-in-right 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-right 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-//And @keyframes for animation
 
-@-webkit-keyframes slide-in-left {
+@-webkit-keyframes slide-in-right {
   0% {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 0;
   }
   100% {
@@ -68,10 +67,10 @@
     opacity: 1;
   }
 }
-@keyframes slide-in-left {
+@keyframes slide-in-right {
   0% {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 0;
   }
   100% {
