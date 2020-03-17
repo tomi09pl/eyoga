@@ -28,11 +28,10 @@ let scrolled = () => {
     return Math.floor(dec*100);
 };
 
-console.log(scrolled());
-
 window.addEventListener('scroll', () => {
     // header.style.setProperty('background-color', scrolled() > 0 ? "#353b48" : "#353b481A");
     header.style.setProperty('background-color', scrolled() > 0 ? "#ECE7E7" : "#353b481A");
+    header.style.setProperty('box-shadow', scrolled() > 0 ? "0 4px 8px 0 rgba(0, 0, 0, 0.2)" : "");
     //=======================================================================//
     section3_h3.style.setProperty('display', scrolled() > 65 ? "" : "none" );
     section3_h3.classList.toggle('slide-in-left', scrolled() > 65 );

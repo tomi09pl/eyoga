@@ -1,27 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {HashRouter as Router, Switch, Route, NavLink} from "react-router-dom";
 import './scss/App.scss';
 
+import Main from './components/Main';
+import Form from './components/Form';
+import NotFound from "./components/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Slideshow from "./components/Main_Section1_Slideshow";
-import Section2 from "./components/Main_Section2_Infoboxes";
-import ExPlanAd from "./components/Main_Section3_CreateExercisePlanAd";
-import WhatIs from "./components/Main_Section4_WhatIs";
-
-import {ParallaxProvider} from 'react-scroll-parallax';
 
 function App() {
     return (
-        <ParallaxProvider>
-            <div className="App">
-                <Header/>
-                <Slideshow/>
-                <Section2/>
-                <WhatIs/>
-                <ExPlanAd/>
-                <Footer/>
-            </div>
-        </ParallaxProvider>
+ <div>
+  <Router>
+      <Header/>
+     <Switch>
+        <Route exact path="/" component={Main} />
+        <Route path="/form" component={Form} />
+        <Route component={NotFound}/>
+     </Switch>
+      <Footer/>
+ </Router>
+</div>
     );
 }
 

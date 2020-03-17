@@ -1,20 +1,21 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const Header = () =>(
 
     <header className="page-header sticky">
         <span className="page-header-logo">
-            <span className="page-header-logo left">Eyes </span>
+            <span className="page-header-logo left">Eyes&nbsp;</span>
             <span className="page-header-logo right">Yoga</span>
         </span>
 
         <nav className="main-nav">
             <ul className="main-nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Exercises</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Info</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><Link exact to='/'>Home</Link></li>
+                <li><Link to='/'>Info</Link></li>
+                <li><Link to='/form'>Planner</Link></li>
+                <li><Link to='/'>Shop</Link></li>
+                <li><Link to='/'>Contact</Link></li>
 
                 <button className="main-nav-toggle-show" aria-label="showMenu" onClick={showMenu}>
                     <span></span>

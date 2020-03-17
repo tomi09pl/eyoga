@@ -1,0 +1,16 @@
+@import "variables";
+
+.formDiv {
+  background-color: $light-brown;
+  height: 100vh;
+}
+
+.bar {
+  height: 100px;
+}
+
+.defect-select {
+  display: flex;
+  flex-direction: column;
+  width: 155px;
+}

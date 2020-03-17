@@ -1,11 +1,12 @@
 @import "variables";
 
 .section4-div {
-  height: 100vh;
+  height: 500px;
   background: $light-color;
 }
 
 .section4-h1{
+  color: $bright-red;
   margin-left: 20px;
   position: relative;
   text-align: left;
@@ -35,11 +36,14 @@
   border: 1px solid $bright-red;
   border-radius: 25px;
   color: $bright-red;
+  display: block;
   font-size: 16px;
   margin-left: 20px;
   padding: 10px 10px;
   position: relative;
   transition: 0.1s ease-in;
+  width: 131px;
+  text-align: center;
 }
 
 .section4-a:hover {
