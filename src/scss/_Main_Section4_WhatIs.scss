@@ -1,8 +1,10 @@
 @import "variables";
 
 .section4-div {
-  height: 500px;
+  //height: 500px;
   background: $light-color;
+  text-shadow: 2px 2px 4px $dark-color;
+  padding-bottom: 100px;
 }
 
 .section4-h1{
@@ -13,6 +15,7 @@
 }
 
 .section4-h3{
+  color: $bright-red;
   padding-top: 18.1px;
   position: relative;
   text-align: left;
@@ -27,7 +30,7 @@
   margin-right: 600px;
   color: $dark-color;
   text-shadow: none;
-  background: #ffffff0D;
+  background: #EE262D0D;
   border-radius: 6px;
   padding: 10px;
 }
@@ -49,6 +52,16 @@
 .section4-a:hover {
   background: $bright-red;
   color: $light-color;
+}
+
+.Collapsible__trigger::after{
+  @extend .section4-a;
+  content: 'MORE...';
+  display: inline-block;
+}
+
+.is-open::after {
+  content: 'LESS...';
 }
 
 //Animation for sliding in from the right
@@ -82,4 +95,10 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+.sectionImg {
+  background-image: url("../img/section4-d-a-v-i-d-s-o-n-l-u-n-a.jpg");
+  background-size: cover;
+  height: 100px;
 }
