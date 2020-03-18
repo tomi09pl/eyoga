@@ -1,18 +1,33 @@
 import React, {Component} from 'react';
 import ExercisePlan from "./ExercisePlan";
-// zaimportuj tablie z exercises.js
+import {loadExercises} from "../exercises"
+
+const palming =
+    {
+        "id": 29,
+        "name": "Palming (eye concealing)",
+        "defect": "age-related-condition",
+        "defectLvl": "medium",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
+        "time": 1
+    };
 
 class ExercisePlanner extends Component{
 
+
+
     constructor(props) {
+        const exercises = loadExercises();
+
         super(props);
         this.state = {
             defect:'',
             defectLvl:'low',
             extra:[],
-            time: '',
+            time: 0,
             plannedExercises: [],
-            availableExercises: [] // to zmien na table z importu
+            availableExercises: exercises,
+            errorsFound: false
         }
     }
 
@@ -44,14 +59,66 @@ class ExercisePlanner extends Component{
         this.setState({extra: nextExtra});
     };
 
-    generatePlan = () => {
-        const planned = this.state.availableExercises
-            .filter(x => x.defect === this.state.defect)
-            .filter(x => x.defectLvl === this.state.defectLvl)
-            .filter(x => x.extra.includes(this.state.extra)) // sprtawdzic jak sie sprawdza czy tabla zawiera druga tablice tzw. innerjoin;
-            // tutaj dodac jakis algorytm na czas
+    generatePlan = (e) => {
+        e.preventDefault();
+        const {defect, defectLvl, availableExercises, extra} = this.state;
+        let timeLeft = parseInt(this.state.time);
+        this.setState({errorsFound: false});
 
-        // w ramach testu planned = importowana tabla
+        //sprawdz defect, time czy sa puste i error jesli tak
+let errorMessage = ''
+        if (defect === ''){
+           errorMessage += "Pusty defect";
+        }
+
+        if (timeLeft === 0) {
+            errorMessage += defect === '' ? " i time" : "Pusty time";
+        }
+
+        if (errorMessage){
+            window.alert(errorMessage);
+            this.setState({errorsFound: true});
+            return;
+        }
+
+        let exercisesByType = availableExercises
+            .filter(x => x.defect === defect)
+            .filter(x => x.defectLvl === defectLvl);
+
+        if (extra.length > 0){
+            exercisesByType = exercisesByType.filter(x => x.extra.some(y=> extra.includes(y)));
+        }
+
+        const planned = [];
+        let counter = 0;
+        while (timeLeft > 0){
+            exercisesByType.forEach((e, index) => {
+               if (e.time <= timeLeft || counter == 100) {
+                   let exerciseTime = e.time;
+
+                   if (counter == 100) {
+                       exerciseTime = timeLeft;
+                   }
+
+                   planned.push({
+                       name: e.name,
+                       time: exerciseTime
+                   });
+                   timeLeft = timeLeft - e.time;
+
+                   if (timeLeft > 0){
+                       palming.id = `${palming.id}-${index}`;
+                       planned.push({
+                           name: palming.name,
+                           time: palming.time
+                       });
+                       timeLeft = timeLeft - palming.time;
+                   }
+               }
+            });
+
+            counter++;
+        }
 
         this.setState({plannedExercises: planned});
         // tutaj based on the state wyfilteruj liste taskow (wczytanych z innego pliku) i zupdatuje state
@@ -62,10 +129,12 @@ class ExercisePlanner extends Component{
 
             <div className="formDiv">
                 <div className="bar"></div>
-                <form>
+                {this.state.errorsFound && <div>Prosze wypelnij wymagane pola</div>}
+                <form onSubmit={this.generatePlan}>
                     <div className="defect-select">
                         <span className="selectTitle">Primary vision defect:</span>
-                        <select name="defect" id="defect" value={this.state.defect} onChange={this.handleDefectOnChange}>
+                        <select name="defect" id="defect" value={this.state.defect} onChange={this.handleDefectOnChange}
+                         classname={`base-class ${this.state.errorsFound && this.state.defect === '' ? "error-class":""}`}>
                             <option value="">Please select vision defect</option>
                             <option value="Short-sightedness">Short sightedness</option>
                             <option value="Long-sightedness">Long sightedness</option>
@@ -120,8 +189,7 @@ class ExercisePlanner extends Component{
                             <option value={30}> 30 minutes</option>
                         </select>
                     </div>
-
-                    <button className="formSubmit" onSubmit={this.generatePlan}>SUBMIT!</button>
+                    <input type="submit" value="SUBMIT" />
 
                 </form>
 

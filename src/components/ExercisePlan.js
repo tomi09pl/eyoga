@@ -14,7 +14,7 @@ class ExercisePlan extends Component {
         return (
             <div className="exercise-plan">
                 {exercises.map((exercise, index) => {
-               return <li key={index}>{exercise.name}</li>
+               return <li key={index}>{exercise.name} - {exercise.time}m</li>
             })}
             </div>
         )

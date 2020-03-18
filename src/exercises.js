@@ -1,10 +1,10 @@
-const availableExercises = [
+export function loadExercises() {return [
     {
         "id": 0,
         "name": "Snellen chart exercise",
         "defect": "Long-sightedness",
         "defectLvl": "high",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -12,7 +12,7 @@ const availableExercises = [
         "name": "Dot Chart Exercise",
         "defect": "Long-sightedness",
         "defectLvl": "high",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -20,7 +20,7 @@ const availableExercises = [
         "name": "Domino chart exercise",
         "defect": "no-defect",
         "defectLvl": "high",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -28,7 +28,7 @@ const availableExercises = [
         "name": "Short swinging",
         "defect": "Long-sightedness",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -36,7 +36,7 @@ const availableExercises = [
         "name": "Pencil swinging ",
         "defect": "Long-sightedness",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -44,7 +44,7 @@ const availableExercises = [
         "name": "Long swinging",
         "defect": "age-related-condition",
         "defectLvl": "medium",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -52,7 +52,7 @@ const availableExercises = [
         "name": "Flash practice",
         "defect": "no-defect",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -60,7 +60,7 @@ const availableExercises = [
         "name": "Analytic vision",
         "defect": "Short-sightedness",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -68,7 +68,7 @@ const availableExercises = [
         "name": "Ship visualization",
         "defect": "Short-sightedness",
         "defectLvl": "medium",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -76,7 +76,7 @@ const availableExercises = [
         "name": "Runners visualization",
         "defect": "Long-sightedness",
         "defectLvl": "high",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -84,7 +84,7 @@ const availableExercises = [
         "name": "Flexible disc",
         "defect": "Long-sightedness",
         "defectLvl": "high",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -92,7 +92,7 @@ const availableExercises = [
         "name": "Drawing mandala with your nose",
         "defect": "Long-sightedness",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -100,7 +100,7 @@ const availableExercises = [
         "name": "Stretching of eye oblique muscles",
         "defect": "Short-sightedness",
         "defectLvl": "high",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -108,7 +108,7 @@ const availableExercises = [
         "name": "Exercise with two charts",
         "defect": "age-related-condition",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -116,7 +116,7 @@ const availableExercises = [
         "name": "Exercise with a cord",
         "defect": "age-related-condition",
         "defectLvl": "medium",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -124,7 +124,7 @@ const availableExercises = [
         "name": "Reading with playing the trombone",
         "defect": "Short-sightedness",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -132,7 +132,7 @@ const availableExercises = [
         "name": "Exercise with a calendar",
         "defect": "no-defect",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -140,7 +140,7 @@ const availableExercises = [
         "name": "Reading of texts in various sizes",
         "defect": "no-defect",
         "defectLvl": "medium",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -148,7 +148,7 @@ const availableExercises = [
         "name": "Reading of the inverted book",
         "defect": "age-related-condition",
         "defectLvl": "high",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -156,7 +156,7 @@ const availableExercises = [
         "name": "Relaxation of rectus muscles",
         "defect": "Long-sightedness",
         "defectLvl": "medium",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -164,7 +164,7 @@ const availableExercises = [
         "name": "Tibetan circle",
         "defect": "no-defect",
         "defectLvl": "high",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -172,7 +172,7 @@ const availableExercises = [
         "name": "Sphere visualization",
         "defect": "age-related-condition",
         "defectLvl": "medium",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -180,7 +180,7 @@ const availableExercises = [
         "name": "Eyeball massage",
         "defect": "no-defect",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -188,7 +188,7 @@ const availableExercises = [
         "name": "Convergence with charts",
         "defect": "Long-sightedness",
         "defectLvl": "medium",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -196,7 +196,7 @@ const availableExercises = [
         "name": "Divergence with charts",
         "defect": "no-defect",
         "defectLvl": "high",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -204,7 +204,7 @@ const availableExercises = [
         "name": "Thumb exercise",
         "defect": "Long-sightedness",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -212,7 +212,7 @@ const availableExercises = [
         "name": "Moving thumb",
         "defect": "no-defect",
         "defectLvl": "low",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 1
     },
     {
@@ -220,7 +220,7 @@ const availableExercises = [
         "name": "Two-cord exercise",
         "defect": "no-defect",
         "defectLvl": "high",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 2
     },
     {
@@ -228,16 +228,7 @@ const availableExercises = [
         "name": "Scanning net",
         "defect": "Long-sightedness",
         "defectLvl": "medium",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
+        "extra": ["Astigmatism" ,"LazyEye" ,"Squint","Convergence"],
         "time": 3
-    },
-    {
-        "id": 29,
-        "name": "Palming (eye concealing)",
-        "defect": "age-related-condition",
-        "defectLvl": "medium",
-        "extra": "Astigmatism,LazyEye,Squint,Convergence",
-        "time": 2
     }
-
-];
+]};
