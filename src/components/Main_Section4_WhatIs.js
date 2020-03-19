@@ -11,7 +11,7 @@ const WhatIs = () => {
         <div className="section4-div">
             <h3 className="section4-h3">WHAT IS EYES YOGA</h3>
             <h1 className='section4-h1'>The Bates Method for Better Eyesight</h1>
-            <div className='test'>
+            <div className='section4-wrapper'>
                 <div className='box1'>
                     <p className='section4-p'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae
                         consectetur excepturi, expedita laudantium maiores molestias officia sint tempore totam vitae

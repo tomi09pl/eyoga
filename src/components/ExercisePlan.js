@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 
 
-
 class ExercisePlan extends Component {
 
     constructor(props) {

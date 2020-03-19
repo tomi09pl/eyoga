@@ -12,9 +12,8 @@ const palming =
         "time": 1
     };
 
+
 class ExercisePlanner extends Component{
-
-
 
     constructor(props) {
         const exercises = loadExercises();
@@ -30,6 +29,7 @@ class ExercisePlanner extends Component{
             errorsFound: false
         }
     }
+
 
     handleDefectOnChange = (event) => {
         console.log("defect value: " +  event.target.value);
@@ -66,7 +66,7 @@ class ExercisePlanner extends Component{
         this.setState({errorsFound: false});
 
         //sprawdz defect, time czy sa puste i error jesli tak
-let errorMessage = ''
+let errorMessage = '';
         if (defect === ''){
            errorMessage += "Pusty defect";
         }
@@ -121,15 +121,19 @@ let errorMessage = ''
         }
 
         this.setState({plannedExercises: planned});
-        // tutaj based on the state wyfilteruj liste taskow (wczytanych z innego pliku) i zupdatuje state
+        // tutaj based on the state wyfiltruj liste taskow (wczytanych z exercises.js) i update'tuj state
     };
 
     render() {
         return(
 
             <div className="formDiv">
-                <div className="bar"></div>
+                <div className="bar" id='form-top'></div>
+                <h1 className="form-title">Exercise Planner</h1>
+                <h2 className="form-subtitle">Create your own exercise set</h2>
+                <div className="divider"></div>
                 {this.state.errorsFound && <div>Prosze wypelnij wymagane pola</div>}
+                <p className='form-p'>This planner will help you to create personalised exercise list crafted for your needs and available time.</p>
                 <form onSubmit={this.generatePlan}>
                     <div className="defect-select">
                         <span className="selectTitle">Primary vision defect:</span>
@@ -141,22 +145,33 @@ let errorMessage = ''
                             <option value="age-related-condition">Age related condition</option>
                             <option value="no-defect">No defect</option>
                         </select>
+
+                        {this.state.defect!==''?
+                            <div className="defect-radio">
+                                <label>
+                                    <input type="radio" value="low" checked={this.state.defectLvl === "low"}
+                                           onChange={this.defectLvlOnChange}/>
+                                    {'low (<1 diopters)'}
+                                </label><br/>
+                                <label>
+                                    <input type="radio" value="medium" checked={this.state.defectLvl === "medium"}
+                                           onChange={this.defectLvlOnChange}/>
+                                    {'medium (1-4 diopters) '}
+                                </label><br/>
+                                <label>
+                                    <input type="radio" value="high" checked={this.state.defectLvl === "high"}
+                                           onChange={this.defectLvlOnChange}/>
+                                    {'high (>4 diopters) '}
+                                </label><br/>
+                            </div>
+                            :null
+                        }
+
+                        <input className='form-submit-btn' type="submit" value="SUBMIT" />
+
                     </div>
 
-                    <div className="defect-radio">
-                        <label>
-                            <input type="radio" value="low" checked={this.state.defectLvl === "low"} onChange={this.defectLvlOnChange} />
-                            {'low (<1 diopters)'}
-                        </label><br/>
-                        <label>
-                            <input type="radio" value="medium" checked={this.state.defectLvl === "medium"} onChange={this.defectLvlOnChange} />
-                            {'medium (1-4 diopters) '}
-                        </label><br/>
-                        <label>
-                            <input type="radio" value="high" checked={this.state.defectLvl === "high"} onChange={this.defectLvlOnChange} />
-                            {'high (>4 diopters) '}
-                        </label><br/>
-                    </div>
+
 
                     <div className="defect-checkbox">
                         <label>
@@ -189,7 +204,6 @@ let errorMessage = ''
                             <option value={30}> 30 minutes</option>
                         </select>
                     </div>
-                    <input type="submit" value="SUBMIT" />
 
                 </form>
 
@@ -198,7 +212,6 @@ let errorMessage = ''
             </div>
         )
     }
-
 
 };
 
