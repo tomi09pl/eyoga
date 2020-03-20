@@ -207,6 +207,8 @@ let errorMessage = '';
 
                 </form>
 
+                <div className="divider"></div>
+
                 {this.state.plannedExercises.length !== 0 &&
                     <ExercisePlan exercises={this.state.plannedExercises} />}
             </div>

@@ -9,7 +9,7 @@ const WhatIs = () => {
 
     return (
         <div className="section4-div">
-            <h3 className="section4-h3">WHAT IS EYES YOGA</h3>
+            <h3 className="section4-h3" id='whatIs'>WHAT IS EYES YOGA</h3>
             <h1 className='section4-h1'>The Bates Method for Better Eyesight</h1>
             <div className='section4-wrapper'>
                 <div className='box1'>

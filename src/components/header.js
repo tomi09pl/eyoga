@@ -1,5 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import { ScrollTo } from "react-scroll-to";
+
+const goToTop = () => {
+    document.documentElement.scrollTop = 0
+};
 
 const Header = () =>(
 
@@ -11,9 +16,12 @@ const Header = () =>(
 
         <nav className="main-nav">
             <ul className="main-nav-list">
-                <li><Link exact to='/'>Home</Link></li>
+                <li><ScrollTo>
+                    {({scroll}) => (
+                        <Link exact to='/' onClick={() => scroll({x:0,y:0,smooth:true})}>Home</Link>
+                    )}</ScrollTo></li>
                 <li><Link to='/'>Info</Link></li>
-                <li><Link to='/form'>Planner</Link></li>
+                <li><Link to='/form' onClick={goToTop}>Planner</Link></li>
                 <li><Link to='/'>Shop</Link></li>
                 <li><Link to='/'>Contact</Link></li>
 

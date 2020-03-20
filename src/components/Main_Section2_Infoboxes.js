@@ -1,6 +1,13 @@
 import React from 'react';
 import {Parallax} from 'react-scroll-parallax';
 
+import { ScrollTo } from "react-scroll-to";
+import {Link} from "react-router-dom";
+
+const goToTop = () => {
+    document.documentElement.scrollTop = 0
+};
+
 const Section2 = () => {
 
     const styleInner = {
@@ -31,7 +38,12 @@ const Section2 = () => {
                     <div className="infobox-txt">
                         <h3>What is Eyes Yoga?</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                        <a href="#"><i className="fas fa-info"></i> Show me more</a>
+                        <ScrollTo>
+                            {({scroll}) => (
+                                <a onClick={() => scroll({x:0,y:1172,smooth:true})}><i className="fas fa-info"></i> Show me more</a>
+                            )}
+                        {/*<a href="#"><i className="fas fa-info"></i> Show me more</a>*/}
+                        </ScrollTo>
                     </div>
                 </div>
             </Parallax>
@@ -75,7 +87,7 @@ const Section2 = () => {
                     <div className="infobox-txt">
                         <h3>Exercise Planner</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                        <a href="#"><i className="fas fa-info"></i> Show me more</a>
+                        <Link to='/form' ><a href="#" onClick={goToTop}><i className="fas fa-info"></i> Show me more</a></Link>
                     </div>
                 </div>
             </Parallax>
