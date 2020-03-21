@@ -12,6 +12,38 @@ const palming =
         "time": 1
     };
 
+function scrollTo(element, to, duration) {
+    let start = element.scrollTop,
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
+
+    let animateScroll = function(){
+        currentTime += increment;
+        let val = Math.easeInOutQuad(currentTime, start, change, duration);
+        element.scrollTop = val;
+        if(currentTime < duration) {
+            setTimeout(animateScroll, increment);
+        }
+    };
+    animateScroll();
+}
+
+//t = current time
+//b = start value
+//c = change in value
+//d = duration
+Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d/2;
+    if (t < 1) return c/2*t*t + b;
+    t--;
+    return -c/2 * (t*(t-2) - 1) + b;
+};
+
+const goDown = () => {
+    scrollTo(document.documentElement, 592, 500)
+};
+
 
 class ExercisePlanner extends Component{
 
@@ -69,6 +101,7 @@ class ExercisePlanner extends Component{
 let errorMessage = '';
         if (defect === ''){
            errorMessage += "Pusty defect";
+            // document.querySelector('#defect').classList.toggle('error');
         }
 
         if (timeLeft === 0) {
@@ -76,7 +109,7 @@ let errorMessage = '';
         }
 
         if (errorMessage){
-            window.alert(errorMessage);
+            // window.alert(errorMessage);
             this.setState({errorsFound: true});
             return;
         }
@@ -132,7 +165,7 @@ let errorMessage = '';
                 <h1 className="form-title">Exercise Planner</h1>
                 <h2 className="form-subtitle">Create your own exercise set</h2>
                 <div className="divider"></div>
-                {this.state.errorsFound && <div>Prosze wypelnij wymagane pola</div>}
+                {this.state.errorsFound && <div className="error"><i className="fas fa-exclamation"></i><span>Please select required information</span></div>}
                 <p className='form-p'>This planner will help you to create personalised exercise list crafted for your needs and available time.</p>
                 <form onSubmit={this.generatePlan}>
                     <div className="defect-select">
@@ -174,6 +207,7 @@ let errorMessage = '';
 
 
                     <div className="defect-checkbox">
+                        <b><span className="defect-checkbox-span">Additional defect:</span></b><br/><br/>
                         <label>
                         <input type="checkbox" value="Astigmatism" checked={this.state.extra.includes("Astigmatism")} onChange={this.extraOnChange}/>
                         Astigmatism
@@ -193,7 +227,7 @@ let errorMessage = '';
                     </div>
 
                     <div className="defect-time-select">
-                        <span className="selectTitle">Exercise daily time:</span>
+                        <span className="selectTitle">Available daily time:</span>
                         <select name="time" id="time" value={this.state.time} onChange={this.timeOnChange}>
                             <option value={0}> Please select available time</option>
                             <option value={5}> 5 minutes</option>
@@ -207,10 +241,14 @@ let errorMessage = '';
 
                 </form>
 
-                <div className="divider"></div>
+                <div className="divider-bottom"></div>
 
                 {this.state.plannedExercises.length !== 0 &&
                     <ExercisePlan exercises={this.state.plannedExercises} />}
+
+                {this.state.plannedExercises.length !== 0 &&
+                    goDown()}
+
             </div>
         )
     }

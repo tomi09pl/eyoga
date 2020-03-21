@@ -4,6 +4,41 @@ import image1 from '../img/section4-d-a-v-i-d-s-o-n-l-u-n-a.jpg';
 import image2 from '../img/section4-david-travis.jpg';
 import image3 from '../img/section4-nrd.jpg';
 import image4 from '../img/section4-processingly.jpg';
+import {Link} from "react-router-dom";
+import {ScrollTo} from "react-scroll-to";
+
+function scrollTo(element, to, duration) {
+    let start = element.scrollTop,
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
+
+    let animateScroll = function(){
+        currentTime += increment;
+        let val = Math.easeInOutQuad(currentTime, start, change, duration);
+        element.scrollTop = val;
+        if(currentTime < duration) {
+            setTimeout(animateScroll, increment);
+        }
+    };
+    animateScroll();
+}
+
+//t = current time
+//b = start value
+//c = change in value
+//d = duration
+Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d/2;
+    if (t < 1) return c/2*t*t + b;
+    t--;
+    return -c/2 * (t*(t-2) - 1) + b;
+};
+
+const goUp = () => {
+
+    scrollTo(document.documentElement, 1170, 200)
+};
 
 const WhatIs = () => {
 
@@ -30,7 +65,7 @@ const WhatIs = () => {
                     <img src={image1} alt="book" className="sectionImg"/>
                 </div>
             </div>
-            <Collapsible>
+            <Collapsible onClosing={goUp}>
                 <div className='test'>
                     <div className='box1'>
                         <p className='section4-p'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda

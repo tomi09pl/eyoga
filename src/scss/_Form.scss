@@ -14,6 +14,11 @@
   width: 97%;
 }
 
+.divider-bottom {
+  @extend .divider;
+  margin-bottom: 35px;
+}
+
 .defect-checkbox {
   margin: 0 50px;
 }
@@ -21,6 +26,31 @@
 .defect-time-select {
   display: flex;
   flex-direction: column;
+}
+
+.defect-radio{
+  margin-top: 10px;
+}
+
+.defect-select {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: $bright-red;
+  background-color: $dark-color;
+  border-radius: 6px;
+  margin: 5px 0;
+  span{
+    position: relative;
+    top: -5px;
+    right: 15px;
+  }
+}
+
+.error-class {
+  border: 2px solid red;
 }
 
 form {
@@ -34,7 +64,7 @@ form {
   background-color: $light-color;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  //height: 150vh;
   padding-left: 25px;
 }
 
@@ -67,15 +97,38 @@ form {
      }
 }
 
-.defect-radio{
-  margin-top: 10px;
-}
-
-.defect-select {
-  display: flex;
-  flex-direction: column;
-}
-
 .hidden {
   display: none;
+}
+
+.selectTitle {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="datetime"],
+form input[type="email"],
+form input[type="number"],
+form input[type="search"],
+form input[type="time"],
+form input[type="url"],
+form input[type="password"],
+//form input[type="checkbox"],
+form textarea,
+form select {
+  display: block;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  border: 2px solid $main-font-color;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
 }

@@ -20,7 +20,12 @@ const Header = () =>(
                     {({scroll}) => (
                         <Link exact to='/' onClick={() => scroll({x:0,y:0,smooth:true})}>Home</Link>
                     )}</ScrollTo></li>
-                <li><Link to='/'>Info</Link></li>
+
+                <li><ScrollTo>
+                    {({scroll}) => (
+                    <Link to='/' onClick={() => scroll({x:0,y:612,smooth:true})}>Info</Link>
+                    )}</ScrollTo></li>
+
                 <li><Link to='/form' onClick={goToTop}>Planner</Link></li>
                 <li><Link to='/'>Shop</Link></li>
                 <li><Link to='/'>Contact</Link></li>

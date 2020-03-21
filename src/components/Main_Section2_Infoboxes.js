@@ -42,7 +42,6 @@ const Section2 = () => {
                             {({scroll}) => (
                                 <a onClick={() => scroll({x:0,y:1172,smooth:true})}><i className="fas fa-info"></i> Show me more</a>
                             )}
-                        {/*<a href="#"><i className="fas fa-info"></i> Show me more</a>*/}
                         </ScrollTo>
                     </div>
                 </div>
